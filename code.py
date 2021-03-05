@@ -76,4 +76,4 @@ symbols = ["AAPL", "VTI", "TSLA", "GME"] # Change this to reflect your portfolio
 while True: # Cycle through tickers every 20 seconds. 
     for ticker in symbols:
         fetch_data(ticker)
-        time.sleep(20) # Change this if you want faster or slower updates. 
+        time.sleep(60) # Change this if you want faster or slower updates. 
