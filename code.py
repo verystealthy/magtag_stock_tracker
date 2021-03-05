@@ -68,7 +68,7 @@ def fetch_data(symbol):
     else:
         magtag.graphics.set_background("bmps/up.bmp")
     magtag.set_text(response['symbol'], index=0, auto_refresh=False) # Get the ticker from the json 
-    magtag.set_text("$" + str(response['latestPrice']), index=1, auto_refresh=False) # Get the latest price from the json
+    magtag.set_text("$" + str(round(response['latestPrice'], 2)), index=1, auto_refresh=False) # Get the latest price from the json
     magtag.set_text(str(round((response['changePercent'] * 100), 2)) + "%", index=2, auto_refresh=True) # Get the % change from the json & redraw the display with all info. 
     time.sleep(2) # Let the display update. 
 
