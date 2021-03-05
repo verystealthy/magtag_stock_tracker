@@ -73,7 +73,7 @@ def fetch_data(symbol):
     time.sleep(2) # Let the display update. 
 
 symbols = ["AAPL", "VTI", "TSLA", "GME"] # Change this to reflect your portfolio (TODO - Press buttons for crypto - Different API endpoint)
-while True: # Cycle through tickers every 20 seconds. 
+while True: # Cycle through tickers every 60 seconds. 
     for ticker in symbols:
         fetch_data(ticker)
         time.sleep(60) # Change this if you want faster or slower updates. 
