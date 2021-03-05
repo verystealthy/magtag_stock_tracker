@@ -62,7 +62,7 @@ magtag.add_text(
 def fetch_data(symbol):
     response = requests.get(f'https://cloud.iexapis.com/stable/stock/{symbol}/quote?token={IEX_API}').json()
     # If the current price is less than the opening price, stonks down.bmp 
-    if response['open'] > response['latestPrice']:
+    if response['changePercent'] < 0:
         magtag.graphics.set_background("bmps/down.bmp")
     # Otherwise, stonks up.bmp (TODO - diamond_hands.bmp)
     else:
