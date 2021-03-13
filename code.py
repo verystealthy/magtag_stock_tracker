@@ -64,9 +64,12 @@ def fetch_data(symbol):
     # If the current price is less than the opening price, stonks down.bmp 
     if response['changePercent'] < 0:
         magtag.graphics.set_background("bmps/down.bmp")
+        magtag.peripherals.neopixels.fill((255, 0, 0))
     # Otherwise, stonks up.bmp (TODO - diamond_hands.bmp)
     else:
         magtag.graphics.set_background("bmps/up.bmp")
+        magtag.peripherals.neopixels.fill((0, 255, 0))
+        
     magtag.set_text(response['symbol'], index=0, auto_refresh=False) # Get the ticker from the json 
     magtag.set_text("$" + str(round(response['latestPrice'], 2)), index=1, auto_refresh=False) # Get the latest price from the json
     magtag.set_text(str(round((response['changePercent'] * 100), 2)) + "%", index=2, auto_refresh=True) # Get the % change from the json & redraw the display with all info. 
