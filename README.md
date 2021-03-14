@@ -4,8 +4,8 @@ Stock Tracker with Adafruit's MagTag Display
 This code will cycle through stock symbols from a list, and will display the following on Adafruit's MagTag e-ink display:
 
 * Stock symbol (e.g. AAPL, TSLA, GME, etc.)
-* Percent change from last closing price (e.g. ```10%``` if the latest updated price is 10% more than the opening price)
-    - Note that this is *NOT* the percent change between latest price and opening price. It is percent change between latest price and the last closing. 
+* Percent change from last closing price (e.g. ```10%``` if the latest updated price is 10% more than the last closing price)
+    - Note that this is *NOT* the percent change between latest price and opening price. It is percent change between latest price and the _last closing_. 
 * Latest share price
 * Market Open / Closed
 * Neopixels are green / red if the Percent Change is positive / negative.  
