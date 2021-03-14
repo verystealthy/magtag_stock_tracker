@@ -59,9 +59,9 @@ magtag.add_text(
 )
 
 magtag.add_text(
-    text_font="fonts/Lato-Bold-ltd-25.bdf",
+    text_font="fonts/Arial-12.bdf",
     text_position=(
-        65,
+        10,
         110,
     ),
     text_scale=0,
