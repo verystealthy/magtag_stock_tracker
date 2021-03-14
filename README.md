@@ -5,7 +5,7 @@ This code will cycle through stock symbols from a list, and will display the fol
 
 * Stock symbol (e.g. AAPL, TSLA, GME, etc.)
 * Percent change from last closing price (e.g. ```10%``` if the latest updated price is 10% more than the last closing price)
-    - Note that this is *NOT* the percent change between latest price and opening price. It is percent change between latest price and the _last closing_. 
+    - Note that this is **NOT** the percent change between latest price and opening price. It is percent change between latest price and the _last closing_. Using the opening price with IEX is weird because the opening price turns to NULL after hours. 
 * Latest share price
 * Market Open / Closed
 * Neopixels are green / red if the Percent Change is positive / negative.  
