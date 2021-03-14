@@ -58,6 +58,15 @@ magtag.add_text(
     text_scale=0,
 )
 
+magtag.add_text(
+    text_font="fonts/Lato-Bold-ltd-25.bdf",
+    text_position=(
+        65,
+        110,
+    ),
+    text_scale=0,
+)
+
 # Grabs the json data from IEX Cloud
 def fetch_data(symbol):
     response = requests.get(f'https://cloud.iexapis.com/stable/stock/{symbol}/quote?token={IEX_API}').json()
@@ -69,7 +78,10 @@ def fetch_data(symbol):
     else:
         magtag.graphics.set_background("bmps/up.bmp")
         magtag.peripherals.neopixels.fill((0, 255, 0))
-        
+    if response['isUSMarketOpen'] is False:
+        magtag.set_text("Market Closed", index=3, auto_refresh=False)
+    else:
+        magtag.set_text("Market Open", index=3, auto_refresh=False)   
     magtag.set_text(response['symbol'], index=0, auto_refresh=False) # Get the ticker from the json 
     magtag.set_text("$" + str(round(response['latestPrice'], 2)), index=1, auto_refresh=False) # Get the latest price from the json
     magtag.set_text(str(round((response['changePercent'] * 100), 2)) + "%", index=2, auto_refresh=True) # Get the % change from the json & redraw the display with all info. 
