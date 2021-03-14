@@ -10,7 +10,7 @@ This code will cycle through stock symbols from a list, and will display the fol
 * Market Open / Closed
 * Neopixels are green / red if the Percent Change is positive / negative.  
 
-The background changes if the stonk is up or down from the previous opening price. 
+The background changes if the stonk is up or down from the previous trading day closing price. 
 
 Just change the "symbols" list to reflect your portfolio. 
 
