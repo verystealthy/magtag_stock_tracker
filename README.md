@@ -6,6 +6,7 @@ This code will cycle through stock symbols from a list, and will display the fol
 * Stock symbol (e.g. AAPL, TSLA, GME, etc.)
 * Percent change from last closing price (e.g. ```10%``` if the latest updated price is 10% more than the opening price)
 * Latest share price
+* Market Open / Closed
 
 The background changes if the stonk is up or down from the previous opening price. 
 
